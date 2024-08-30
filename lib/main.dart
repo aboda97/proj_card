@@ -27,53 +27,72 @@ class MyApp extends StatelessWidget {
 class ProjCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
             children: [
-              CardHeaderItems(
+              const CardHeaderItems(
                 cardHeaderItemsColor: Colors.orangeAccent,
                 cardHeaderItemsText: 'كارت المشروع',
               ),
-              CardHeaderItems(
+              const CardHeaderItems(
                 cardHeaderItemsColor: Color.fromARGB(255, 73, 126, 216),
                 cardHeaderItemsText: 'البيانات الأساسية',
               ),
-              CardRowsTwoItems(
-                cardRowName: 'أسم المشروع',
-                cardRowDescription: 'تطوير ورفع كفاءة الطرق والمواني ',
+              Row(
+                children: [
+                  Expanded(
+                    flex: 2,
+                    child: Image.asset(
+                      'assets/proj.jpg',
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  const Expanded(
+                    flex: 4,
+                    child: Column(
+                      children: [
+                        CardRowsTwoItems(
+                          cardRowName: 'أسم المشروع',
+                          cardRowDescription:
+                              'تطوير ورفع كفاءة الطرق والمواني ',
+                        ),
+                        CardRowsTwoItems(
+                          cardRowName: 'كود وزارة التخطيط',
+                          cardRowDescription: '1022499',
+                        ),
+                        CardRowsTwoItems(
+                          cardRowName: 'جهه تمويل المشروع',
+                          cardRowDescription: 'بنك الاستثمار الدولي',
+                        ),
+                        CardRowsTwoItems(
+                          cardRowName: 'جهه الإشراف',
+                          cardRowDescription: 'رئاسة مجلس الوزراء',
+                        ),
+                        CardRowsTwoItems(
+                          cardRowName: 'الشركة المنفذة',
+                          cardRowDescription: 'لا يوجد',
+                        ),
+                        CardRowsTwoItems(
+                          cardRowName: 'المجال',
+                          cardRowDescription: 'الإنشاء',
+                        ),
+                        CardRowsTwoItems(
+                          cardRowName: 'وصف المشروع',
+                          cardRowDescription:
+                              'تطوير ورفع كفاءة الطرق والمواني بالقاهرة والاسكندريه وبورسعيد',
+                        ),
+                      ],
+                    ),
+                  )
+                ],
               ),
-              CardRowsTwoItems(
-                cardRowName: 'كود وزارة التخطيط',
-                cardRowDescription: '1022499',
-              ),
-              CardRowsTwoItems(
-                cardRowName: 'جهه تمويل المشروع',
-                cardRowDescription: 'بنك الاستثمار الدولي',
-              ),
-              CardRowsTwoItems(
-                cardRowName: 'جهه الإشراف',
-                cardRowDescription: 'رئاسة مجلس الوزراء',
-              ),
-              CardRowsTwoItems(
-                cardRowName: 'الشركة المنفذة',
-                cardRowDescription: 'لا يوجد',
-              ),
-              CardRowsTwoItems(
-                cardRowName: 'المجال',
-                cardRowDescription: 'الإنشاء',
-              ),
-              CardRowsTwoItems(
-                cardRowName: 'وصف المشروع',
-                cardRowDescription:
-                    'تطوير ورفع كفاءة الطرق والمواني بالقاهرة والاسكندريه وبورسعيد',
-              ),
-              CardHeaderItems(
+              const CardHeaderItems(
                 cardHeaderItemsColor: Color.fromARGB(255, 73, 126, 216),
                 cardHeaderItemsText: 'البيانات المالية والتنفيذية',
               ),
-              CardRowsSixItems(
+              const CardRowsSixItems(
                 cardRowNameColumn1: 'تاريخ البدء المخطط',
                 cardRowDescriptionColumn1: '12 - 8 - 2021',
                 cardRowNameColumn2: 'تاريخ الانتهاء المخطط',
@@ -81,7 +100,7 @@ class ProjCard extends StatelessWidget {
                 cardRowNameColumn3: 'مدة التنفيذ المخطط',
                 cardRowDescriptionColumn3: '41 شهر',
               ),
-              CardRowsSixItems(
+              const CardRowsSixItems(
                 cardRowNameColumn1: 'تاريخ البدء الفعلي',
                 cardRowDescriptionColumn1: '12 - 8 - 2021',
                 cardRowNameColumn2: 'تاريخ الانتهاء الفعلي',
@@ -89,11 +108,11 @@ class ProjCard extends StatelessWidget {
                 cardRowNameColumn3: 'مدة التنفيذ الفعلية (حتي الان)',
                 cardRowDescriptionColumn3: '41 شهر',
               ),
-              CardRowsTwoItems(
+              const CardRowsTwoItems(
                 cardRowName: 'التكلفة المخططة',
                 cardRowDescription: '.8 مليار جنية',
               ),
-              CardRowsSixItems(
+              const CardRowsSixItems(
                 cardRowNameColumn1: 'المنصرف بالجنية',
                 cardRowDescriptionColumn1: '15 مليون جنية',
                 cardRowNameColumn2: 'نسبة التنفيذ',
