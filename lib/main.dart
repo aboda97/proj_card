@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:proj_card/widgets/custom_card_header_items.dart';
+import 'package:proj_card/widgets/custom_card_rows_2items.dart';
+import 'package:proj_card/widgets/custom_card_rows_6items.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,642 +27,79 @@ class MyApp extends StatelessWidget {
 class ProjCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Container(
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Colors.grey,
-                  ),
-                  color: Colors.orangeAccent,
-                ),
-                child: const Text(
-                  'كارت المشروع',
-                  style: TextStyle(
-                    fontSize: 24.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
+              CardHeaderItems(
+                cardHeaderItemsColor: Colors.orangeAccent,
+                cardHeaderItemsText: 'كارت المشروع',
               ),
-              Container(
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Colors.grey,
-                  ),
-                  color: const Color.fromARGB(255, 73, 126, 216),
-                ),
-                child: const Text(
-                  'البيانات الأساسية',
-                  style: TextStyle(
-                    fontSize: 24.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
+              CardHeaderItems(
+                cardHeaderItemsColor: Color.fromARGB(255, 73, 126, 216),
+                cardHeaderItemsText: 'البيانات الأساسية',
               ),
-              Container(
-                decoration: BoxDecoration(
-                    border: Border.all(
-                  color: Colors.grey,
-                )),
-                child: IntrinsicHeight(
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      const Expanded(
-                        flex: 4,
-                        child: Padding(
-                          padding: EdgeInsets.all(4.0),
-                          child: Text(
-                            ' أسموطرق',
-                            style: TextStyle(
-                              fontSize: 16.0,
-                            ),
-                            textAlign: TextAlign.right,
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                        flex: 1,
-                        child: Container(
-                          padding: const EdgeInsets.all(4.0),
-                          color: Colors.orangeAccent,
-                          child: const Text(
-                            'أسم المشروع المشروعالمشروعالمشروعالمشروعالمشروعالمشروعالمشروعالمشروعالمشروعالمشروع22222',
-                            style: TextStyle(
-                              fontSize: 18.0,
-                            ),
-                            textAlign: TextAlign.right,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+              CardRowsTwoItems(
+                cardRowName: 'أسم المشروع',
+                cardRowDescription: 'تطوير ورفع كفاءة الطرق والمواني ',
               ),
-              Container(
-                decoration: BoxDecoration(
-                    border: Border.all(
-                  color: Colors.grey,
-                )),
-                child: IntrinsicHeight(
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      const Expanded(
-                        flex: 4,
-                        child: Padding(
-                          padding: EdgeInsets.all(4.0),
-                          child: Text(
-                            ' أسم المشروع أسم المشروع أسم المشروع v أسم المشروع أسم المشروع أسم المشروع أسم المشروعتطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق',
-                            style: TextStyle(
-                              fontSize: 16.0,
-                            ),
-                            textAlign: TextAlign.right,
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                        flex: 1,
-                        child: Container(
-                          padding: const EdgeInsets.all(4.0),
-                          color: Colors.orangeAccent,
-                          child: const Text(
-                            'أسم المشروع',
-                            style: TextStyle(
-                              fontSize: 18.0,
-                            ),
-                            textAlign: TextAlign.right,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+              CardRowsTwoItems(
+                cardRowName: 'كود وزارة التخطيط',
+                cardRowDescription: '1022499',
               ),
-              Container(
-                decoration: BoxDecoration(
-                    border: Border.all(
-                  color: Colors.grey,
-                )),
-                child: IntrinsicHeight(
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      const Expanded(
-                        flex: 4,
-                        child: Padding(
-                          padding: EdgeInsets.all(4.0),
-                          child: Text(
-                            ' أسم المشروع أسم المشروع أسم المشروع v أسم المشروع أسم المشروع أسم المشروع أسم المشروعتطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق',
-                            style: TextStyle(
-                              fontSize: 16.0,
-                            ),
-                            textAlign: TextAlign.right,
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                        flex: 1,
-                        child: Container(
-                          padding: const EdgeInsets.all(4.0),
-                          color: Colors.orangeAccent,
-                          child: const Text(
-                            'أسم المشروع',
-                            style: TextStyle(
-                              fontSize: 18.0,
-                            ),
-                            textAlign: TextAlign.right,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+              CardRowsTwoItems(
+                cardRowName: 'جهه تمويل المشروع',
+                cardRowDescription: 'بنك الاستثمار الدولي',
               ),
-              Container(
-                decoration: BoxDecoration(
-                    border: Border.all(
-                  color: Colors.grey,
-                )),
-                child: IntrinsicHeight(
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      const Expanded(
-                        flex: 4,
-                        child: Padding(
-                          padding: EdgeInsets.all(4.0),
-                          child: Text(
-                            ' أسم المشروع أسم المشروع أسم المشروع v أسم المشروع أسم المشروع أسم المشروع أسم المشروعتطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق',
-                            style: TextStyle(
-                              fontSize: 16.0,
-                            ),
-                            textAlign: TextAlign.right,
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                        flex: 1,
-                        child: Container(
-                          padding: const EdgeInsets.all(4.0),
-                          color: Colors.orangeAccent,
-                          child: const Text(
-                            'أسم المشروع',
-                            style: TextStyle(
-                              fontSize: 18.0,
-                            ),
-                            textAlign: TextAlign.right,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+              CardRowsTwoItems(
+                cardRowName: 'جهه الإشراف',
+                cardRowDescription: 'رئاسة مجلس الوزراء',
               ),
-              Container(
-                decoration: BoxDecoration(
-                    border: Border.all(
-                  color: Colors.grey,
-                )),
-                child: IntrinsicHeight(
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      const Expanded(
-                        flex: 4,
-                        child: Padding(
-                          padding: EdgeInsets.all(4.0),
-                          child: Text(
-                            ' أسم المشروع أسم المشروع أسم المشروع v أسم المشروع أسم المشروع أسم المشروع أسم المشروعتطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق',
-                            style: TextStyle(
-                              fontSize: 16.0,
-                            ),
-                            textAlign: TextAlign.right,
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                        flex: 1,
-                        child: Container(
-                          padding: const EdgeInsets.all(4.0),
-                          color: Colors.orangeAccent,
-                          child: const Text(
-                            'أسم المشروع',
-                            style: TextStyle(
-                              fontSize: 18.0,
-                            ),
-                            textAlign: TextAlign.right,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+              CardRowsTwoItems(
+                cardRowName: 'الشركة المنفذة',
+                cardRowDescription: 'لا يوجد',
               ),
-              Container(
-                decoration: BoxDecoration(
-                    border: Border.all(
-                  color: Colors.grey,
-                )),
-                child: IntrinsicHeight(
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      const Expanded(
-                        flex: 4,
-                        child: Padding(
-                          padding: EdgeInsets.all(4.0),
-                          child: Text(
-                            ' أسم المشروع أسم المشروع أسم المشروع v أسم المشروع أسم المشروع أسم المشروع أسم المشروعتطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق',
-                            style: TextStyle(
-                              fontSize: 16.0,
-                            ),
-                            textAlign: TextAlign.right,
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                        flex: 1,
-                        child: Container(
-                          padding: const EdgeInsets.all(4.0),
-                          color: Colors.orangeAccent,
-                          child: const Text(
-                            'أسم المشروع',
-                            style: TextStyle(
-                              fontSize: 18.0,
-                            ),
-                            textAlign: TextAlign.right,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+              CardRowsTwoItems(
+                cardRowName: 'المجال',
+                cardRowDescription: 'الإنشاء',
               ),
-              Container(
-                decoration: BoxDecoration(
-                    border: Border.all(
-                  color: Colors.grey,
-                )),
-                child: IntrinsicHeight(
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      const Expanded(
-                        flex: 4,
-                        child: Padding(
-                          padding: EdgeInsets.all(4.0),
-                          child: Text(
-                            ' أسم المشروع أسم المشروع أسم المشروع v أسم المشروع أسم المشروع أسم المشروع أسم المشروعتطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق',
-                            style: TextStyle(
-                              fontSize: 16.0,
-                            ),
-                            textAlign: TextAlign.right,
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                        flex: 1,
-                        child: Container(
-                          padding: const EdgeInsets.all(4.0),
-                          color: Colors.orangeAccent,
-                          child: const Text(
-                            'أسم المشروع',
-                            style: TextStyle(
-                              fontSize: 18.0,
-                            ),
-                            textAlign: TextAlign.right,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+              CardRowsTwoItems(
+                cardRowName: 'وصف المشروع',
+                cardRowDescription:
+                    'تطوير ورفع كفاءة الطرق والمواني بالقاهرة والاسكندريه وبورسعيد',
               ),
-              Container(
-                decoration: BoxDecoration(
-                    border: Border.all(
-                  color: Colors.grey,
-                )),
-                child: IntrinsicHeight(
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      const Expanded(
-                        flex: 4,
-                        child: Padding(
-                          padding: EdgeInsets.all(4.0),
-                          child: Text(
-                            ' أسم المشروع أسم المشروع أسم المشروع v أسم المشروع أسم المشروع أسم المشروع أسم المشروعتطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق',
-                            style: TextStyle(
-                              fontSize: 16.0,
-                            ),
-                            textAlign: TextAlign.right,
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                        flex: 1,
-                        child: Container(
-                          padding: const EdgeInsets.all(4.0),
-                          color: Colors.orangeAccent,
-                          child: const Text(
-                            'أسم المشروع',
-                            style: TextStyle(
-                              fontSize: 18.0,
-                            ),
-                            textAlign: TextAlign.right,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+              CardHeaderItems(
+                cardHeaderItemsColor: Color.fromARGB(255, 73, 126, 216),
+                cardHeaderItemsText: 'البيانات المالية والتنفيذية',
               ),
-              Container(
-                decoration: BoxDecoration(
-                    border: Border.all(
-                  color: Colors.grey,
-                )),
-                child: IntrinsicHeight(
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      const Expanded(
-                        flex: 4,
-                        child: Padding(
-                          padding: EdgeInsets.all(4.0),
-                          child: Text(
-                            ' أسم المشروع أسم المشروع أسم المشروع v أسم المشروع أسم المشروع أسم المشروع أسم المشروعتطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق',
-                            style: TextStyle(
-                              fontSize: 16.0,
-                            ),
-                            textAlign: TextAlign.right,
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                        flex: 1,
-                        child: Container(
-                          padding: const EdgeInsets.all(4.0),
-                          color: Colors.orangeAccent,
-                          child: const Text(
-                            'أسم المشروع',
-                            style: TextStyle(
-                              fontSize: 18.0,
-                            ),
-                            textAlign: TextAlign.right,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+              CardRowsSixItems(
+                cardRowNameColumn1: 'تاريخ البدء المخطط',
+                cardRowDescriptionColumn1: '12 - 8 - 2021',
+                cardRowNameColumn2: 'تاريخ الانتهاء المخطط',
+                cardRowDescriptionColumn2: '12 - 8 - 2021',
+                cardRowNameColumn3: 'مدة التنفيذ المخطط',
+                cardRowDescriptionColumn3: '41 شهر',
               ),
-              Container(
-                decoration: BoxDecoration(
-                    border: Border.all(
-                  color: Colors.grey,
-                )),
-                child: IntrinsicHeight(
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      const Expanded(
-                        flex: 4,
-                        child: Padding(
-                          padding: EdgeInsets.all(4.0),
-                          child: Text(
-                            ' أسم المشروع أسم المشروع أسم المشروع v أسم المشروع أسم المشروع أسم المشروع أسم المشروعتطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق',
-                            style: TextStyle(
-                              fontSize: 16.0,
-                            ),
-                            textAlign: TextAlign.right,
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                        flex: 1,
-                        child: Container(
-                          padding: const EdgeInsets.all(4.0),
-                          color: Colors.orangeAccent,
-                          child: const Text(
-                            'أسم المشروع',
-                            style: TextStyle(
-                              fontSize: 18.0,
-                            ),
-                            textAlign: TextAlign.right,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+              CardRowsSixItems(
+                cardRowNameColumn1: 'تاريخ البدء الفعلي',
+                cardRowDescriptionColumn1: '12 - 8 - 2021',
+                cardRowNameColumn2: 'تاريخ الانتهاء الفعلي',
+                cardRowDescriptionColumn2: '12 - 8 - 2021',
+                cardRowNameColumn3: 'مدة التنفيذ الفعلية (حتي الان)',
+                cardRowDescriptionColumn3: '41 شهر',
               ),
-              Container(
-                decoration: BoxDecoration(
-                    border: Border.all(
-                  color: Colors.grey,
-                )),
-                child: IntrinsicHeight(
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      const Expanded(
-                        flex: 4,
-                        child: Padding(
-                          padding: EdgeInsets.all(4.0),
-                          child: Text(
-                            ' أسم المشروع أسم المشروع أسم المشروع v أسم المشروع أسم المشروع أسم المشروع أسم المشروعتطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق',
-                            style: TextStyle(
-                              fontSize: 16.0,
-                            ),
-                            textAlign: TextAlign.right,
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                        flex: 1,
-                        child: Container(
-                          padding: const EdgeInsets.all(4.0),
-                          color: Colors.orangeAccent,
-                          child: const Text(
-                            'أسم المشروع',
-                            style: TextStyle(
-                              fontSize: 18.0,
-                            ),
-                            textAlign: TextAlign.right,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+              CardRowsTwoItems(
+                cardRowName: 'التكلفة المخططة',
+                cardRowDescription: '.8 مليار جنية',
               ),
-              Container(
-                decoration: BoxDecoration(
-                    border: Border.all(
-                  color: Colors.grey,
-                )),
-                child: IntrinsicHeight(
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      const Expanded(
-                        flex: 4,
-                        child: Padding(
-                          padding: EdgeInsets.all(4.0),
-                          child: Text(
-                            ' أسم المشروع أسم المشروع أسم المشروع v أسم المشروع أسم المشروع أسم المشروع أسم المشروعتطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق',
-                            style: TextStyle(
-                              fontSize: 16.0,
-                            ),
-                            textAlign: TextAlign.right,
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                        flex: 1,
-                        child: Container(
-                          padding: const EdgeInsets.all(4.0),
-                          color: Colors.orangeAccent,
-                          child: const Text(
-                            'أسم المشروع',
-                            style: TextStyle(
-                              fontSize: 18.0,
-                            ),
-                            textAlign: TextAlign.right,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              Container(
-                decoration: BoxDecoration(
-                    border: Border.all(
-                  color: Colors.grey,
-                )),
-                child: IntrinsicHeight(
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      const Expanded(
-                        flex: 4,
-                        child: Padding(
-                          padding: EdgeInsets.all(4.0),
-                          child: Text(
-                            ' أسم المشروع أسم المشروع أسم المشروع v أسم المشروع أسم المشروع أسم المشروع أسم المشروعتطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق',
-                            style: TextStyle(
-                              fontSize: 16.0,
-                            ),
-                            textAlign: TextAlign.right,
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                        flex: 1,
-                        child: Container(
-                          padding: const EdgeInsets.all(4.0),
-                          color: Colors.orangeAccent,
-                          child: const Text(
-                            'أسم المشروع',
-                            style: TextStyle(
-                              fontSize: 18.0,
-                            ),
-                            textAlign: TextAlign.right,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              Container(
-                decoration: BoxDecoration(
-                    border: Border.all(
-                  color: Colors.grey,
-                )),
-                child: IntrinsicHeight(
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      const Expanded(
-                        flex: 4,
-                        child: Padding(
-                          padding: EdgeInsets.all(4.0),
-                          child: Text(
-                            ' أسم المشروع أسم المشروع أسم المشروع v أسم المشروع أسم المشروع أسم المشروع أسم المشروعتطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق',
-                            style: TextStyle(
-                              fontSize: 16.0,
-                            ),
-                            textAlign: TextAlign.right,
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                        flex: 1,
-                        child: Container(
-                          padding: const EdgeInsets.all(4.0),
-                          color: Colors.orangeAccent,
-                          child: const Text(
-                            'أسم المشروع',
-                            style: TextStyle(
-                              fontSize: 18.0,
-                            ),
-                            textAlign: TextAlign.right,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              Container(
-                decoration: BoxDecoration(
-                    border: Border.all(
-                  color: Colors.grey,
-                )),
-                child: IntrinsicHeight(
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      const Expanded(
-                        flex: 4,
-                        child: Padding(
-                          padding: EdgeInsets.all(4.0),
-                          child: Text(
-                            ' أسم المشروع أسم المشروع أسم  المشروع أسم المشروع أسم  المشروع أسم المشروع أسم  المشروع أسم المشروع أسم  المشروع أسم المشروع أسم  المشروع أسم المشروع أسم  المشروع أسم المشروع أسم  المشروع أسم المشروع أسم  المشروع أسم المشروع أسم  المشروع أسم المشروع أسم  المشروع أسم المشروع أسم  المشروع أسم المشروع أسم  المشروع أسم المشروع أسم  المشروع أسم المشروع أسم  المشروع أسم المشروع أسم  المشروع أسم المشروع أسم  المشروع أسم المشروع أسم  المشروع أسم المشروع أسم  المشروع أسم المشروع أسم  المشروع أسم المشروع أسم  المشروع أسم المشروع أسم  المشروع أسم المشروع أسم  المشروع أسم المشروع أسم  المشروع أسم المشروع أسم  المشروع أسم المشروع أسم  المشروع أسم المشروع أسم  المشروع أسم المشروع أسم  المشروع أسم المشروع أسم  المشروع أسم المشروع أسم  المشروع أسم المشروع أسم  المشروع v أسم المشروع أسم المشروع أسم المشروع أسم المشروعتطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق تطوير ورفع كفاءة الطرق',
-                            style: TextStyle(
-                              fontSize: 16.0,
-                            ),
-                            textAlign: TextAlign.right,
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                        flex: 1,
-                        child: Container(
-                          padding: const EdgeInsets.all(4.0),
-                          color: Colors.orangeAccent,
-                          child: const Text(
-                            'أسم المشروع',
-                            style: TextStyle(
-                              fontSize: 18.0,
-                            ),
-                            textAlign: TextAlign.right,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+              CardRowsSixItems(
+                cardRowNameColumn1: 'المنصرف بالجنية',
+                cardRowDescriptionColumn1: '15 مليون جنية',
+                cardRowNameColumn2: 'نسبة التنفيذ',
+                cardRowDescriptionColumn2: '50%',
+                cardRowNameColumn3: 'تاريخ آخر تحديث نبة تنفيذ',
+                cardRowDescriptionColumn3: '12 - 8 - 2021',
               ),
             ],
           ),
